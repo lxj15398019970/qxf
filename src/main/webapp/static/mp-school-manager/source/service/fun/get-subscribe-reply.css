@@ -1,0 +1,120 @@
+#replyTab {
+	
+}
+
+#replyTab li {
+	margin-right: 20px;
+}
+
+#tabContent {
+	margin: 30px 0;
+}
+
+/** body  **/
+#addKeyListModel .modal-body {
+	padding-left: 30px;
+}
+
+.selectToggle {
+	padding: 10px;
+}
+
+.selectToggleLayer {
+	display: none;
+}
+
+.news-wrap {
+}
+.news-list {
+	padding: 15px 10px
+}
+
+.newsBtn {
+	width: 100%;
+font-size: 27px;
+text-align: center;
+border: 0 none;
+padding: 3px 0;
+}
+
+.swfimg{
+	width : 100px;
+	height : 100px;
+	position : relative;
+	margin-top :12px;
+}
+.swf-t{
+	position: relative;
+bottom: 10px;
+left: 10px;
+color : #737373;
+font-size : 12px;
+}
+.log{
+	margin: 0;
+padding: 10px 0;
+padding-left: 16px;
+padding-bottom: 0;
+margin-bottom : 20px;
+list-style : none;
+}
+.swf-close{
+	width: 20px;
+height: 20px;
+border-radius: 85px;
+background: #c7c7c7;
+color: #fff;
+position: absolute;
+right: -6px;
+top: -8px;
+text-align: center;
+font-size: 14px;
+cursor: pointer;
+}
+
+.log .progressbar{
+	display : none;
+}
+
+.news-list{
+	position: relative;
+	border: 1px solid #ccc;
+margin-bottom: 15px;
+}
+.clsoe-new-layer{
+	position: absolute;
+right: 12px;
+top: 0;
+font-size: 20px;
+cursor: pointer;
+	
+}
+
+.swfImgBoth{
+	overflow: hidden;
+width: 100%;
+height: 100%;
+}
+
+.thumbnail{
+	padding : 10px;
+	position : relative;
+	width : 100px;
+	overflow: hidden;
+}
+.thumbnail info{
+	padding-left : 1px;
+}
+.thumbnail img{
+	margin : auto 0 !important;
+}
+
+.wu-close{
+	position: absolute;
+right: 4px;
+top: 0px;
+font-size: 12px;
+cursor: pointer;
+color: red;
+	
+}

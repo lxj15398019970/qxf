@@ -1,0 +1,50 @@
+/**
+ *
+ * 使用AO思想来去写
+ * sherlock
+ *
+ **/
+
+/** 自旋转动画 **/
+
+/* 快 */
+.spin.fast{
+    -webkit-animation:spin .6s infinite linear ;
+}
+/* 正常 */
+.spin.normal{
+    -webkit-animation:spin 1s infinite linear ;
+}
+/* 慢 */
+.spin.slow{
+    -webkit-animation:spin 2s infinite linear ;
+}
+
+@-webkit-keyframes spin {
+    0%{
+        -webkit-transform: rotate(0deg);
+    }
+    50%{
+        -webkit-transform: rotate(180deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/** 自旋转动画 **/

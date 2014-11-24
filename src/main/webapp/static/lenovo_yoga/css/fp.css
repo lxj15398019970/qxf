@@ -1,0 +1,542 @@
+body {
+    text-align: center;
+    background: #000;
+    font-family: 'Microsoft Sans Serif', Arial, Helvetica, Verdana;
+    color: #48321D;
+}
+
+h2 {
+    color: #E61D25;
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+p {
+    display: block;
+    font-size: 16px;
+    margin: 0 0 15px;
+}
+
+#game {
+    clear: both;
+    /*background: #572090;*/
+    width: 560px;
+    height: 490px;
+    margin: 0 auto 10px;
+    padding: 30px 0 0 19px;
+    display: -webkit-box;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px #CC1220;
+    -webkit-box-shadow: 0 0 4px #CC1220;
+    -moz-box-shadow: 0 0 4px #CC1220;
+}
+
+#time {
+    clear: both;
+    position: relative;
+}
+
+#cards {
+    position: relative;
+    width: 520px;
+    height: 490px;
+    margin: 0 auto;
+}
+
+.card {
+    -webkit-perspective: 600;
+    width: 120px;
+    height: 146px;
+    position: absolute;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.face {
+    /*border-radius: 10px;*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition-property: opacity, transform, box-shadow;
+    -webkit-transition-duration: .3s;
+    -webkit-backface-visibility: hidden;
+}
+
+.front {
+    background: url(../fp_image/pic09.png) no-repeat;
+    z-index: 10;
+}
+
+.back {
+    background: url(../fp_image/pic09.png) no-repeat;
+    -webkit-transform: rotate3d(0, 1, 0, -180deg);
+    z-index: 8;
+}
+
+.card:hover .face, .card-flipped .face {
+    -webkit-box-shadow: 0 0 10px #CC1220;
+}
+
+.card-flipped .front {
+    -webkit-transform: rotate3d(0, 1, 0, 180deg);
+    z-index: 8;
+}
+
+.card-flipped .back {
+    -webkit-transform: rotate3d(0, 1, 0, 0deg);
+    z-index: 10;
+}
+
+.card-removed {
+    opacity: 0;
+}
+
+.cardAQ {
+    background: url(../fp_image/pic01.png) no-repeat;
+}
+
+.cardAK {
+    background: url(../fp_image/pic02.png) no-repeat;
+}
+
+.cardCK {
+    background: url(../fp_image/pic03.png) no-repeat;
+}
+
+.cardBQ {
+    background: url(../fp_image/pic04.png) no-repeat;
+}
+
+.cardCQ {
+    background: url(../fp_image/pic05.png) no-repeat;
+}
+
+.cardBK {
+    background: url(../fp_image/pic06.png) no-repeat;
+}
+
+.cardDQ {
+    background: url(../fp_image/pic07.png) no-repeat;
+}
+
+.cardDK {
+    background: url(../fp_image/pic08.png) no-repeat;
+}
+
+#game_wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 640px;
+}
+
+#timer {
+    background: #DE0098;
+    height: 50px;
+    width: 220px;
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+    float: right;
+    margin: 10px;
+}
+
+#timer p {
+    color: #fff;
+    left: 23px;
+    margin: 0 0 10px;
+    position: absolute;
+    top: 19px;
+    font-size: 30px;
+}
+
+#popup {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    width: 100%;
+    z-index: 10;
+    width: 250px;
+    height: 310px;
+    background: url(../fp_image/tipsBg.png) no-repeat;
+    padding: 20px 20px 0;
+    text-align: left;
+    display: none;
+}
+
+#popup p.succeed-txt {
+    font-size: 16px;
+    margin: 0 13px 15px 0;
+    line-height: 24px;
+}
+
+#popup p {
+    display: none;
+}
+
+.error1,
+.error2,
+.error3,
+.error4,
+.error5,
+.error6,
+.error7,
+.error8 {
+    font-size: 18px;
+    padding-top: 28px;
+}
+
+.error4 {
+    padding-top: 24px;
+}
+
+.error5 {
+    padding-top: 4px;
+}
+
+.error6 {
+    padding-top: 22px;
+}
+
+.error7 {
+    padding-top: 8px;
+}
+
+.error8,
+.error9 {
+    padding-top: 22px;
+}
+
+.lenove-pic {
+    width: 640px;
+    height: auto;
+}
+
+/* 横向放置的手机及分辨率更小的设备 */
+@media (max-width: 640px) {
+    #game_wrapper {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #timer {
+        background: none repeat scroll 0 0 #d3221c;
+        border-radius: 5px;
+        float: right;
+        height: 35px;
+        margin: 10px;
+        position: relative;
+        text-align: center;
+        width: 169px;
+    }
+
+    #timer p {
+        color: #fff;
+        font-size: 20px;
+        left: 34px;
+        margin: 0 0 10px;
+        position: absolute;
+        top: 10px;
+    }
+
+    #game {
+        clear: both;
+        background: #572090;
+        width: 100%;
+        height: auto;
+        margin: 0 auto 10px;
+        padding: 3px 0 0 3px;
+        display: -webkit-box;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 4px #CC1220;
+        -webkit-box-shadow: 0 0 4px #CC1220;
+        -moz-box-shadow: 0 0 4px #CC1220;
+    }
+
+    .card {
+        -webkit-perspective: 600;
+        width: 73px;
+        height: 88px;
+        position: absolute;
+        -moz-transition: all .3s;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+
+    }
+
+    #cards {
+        position: relative;
+        width:328px;
+        height: 294px;
+    }
+
+    .front {
+        background: url(../fp_image/pic09.png) no-repeat;
+        z-index: 10;
+        background-size:73px auto;
+        display: block;
+    }
+
+    .back {
+        background: url(../fp_image/pic09.png) no-repeat;
+        -webkit-transform: rotate3d(0, 1, 0, -180deg);
+        z-index: 8;
+        background-size:73px auto;
+    }
+
+    .cardAQ {
+        background: url(../fp_image/pic01.png) no-repeat;
+        background-size:73px auto;
+    }
+
+    .cardAK {
+        background: url(../fp_image/pic02.png) no-repeat;
+        background-size:73px auto;
+    }
+
+    .cardCK {
+        background: url(../fp_image/pic03.png) no-repeat;
+        background-size:73px auto;
+    }
+
+    .cardBQ {
+        background: url(../fp_image/pic04.png) no-repeat;
+        background-size:73px auto;
+    }
+
+    .cardCQ {
+        background: url(../fp_image/pic05.png) no-repeat;
+    }
+
+    .cardBK {
+        background: url(../fp_image/pic06.png) no-repeat;
+        background-size:73px auto;
+    }
+
+    .cardDQ {
+        background: url(../fp_image/pic07.png) no-repeat;
+        background-size:73px auto;
+    }
+
+    .cardDK {
+        background: url(../fp_image/pic08.png) no-repeat;
+        background-size:73px auto;
+    }
+    .lenove-pic {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#phoneSubLayer {
+    width: 340px;
+    height: 191px;
+    background: url(../fp_image/phoneSub-bg.png) no-repeat;
+    background-size: 340px auto;
+    text-align: left;
+    position: absolute;
+    top: 570px;
+    left: 50%;
+    z-index: 100;
+    margin-left: -171px;
+    display: none;
+}
+
+#phoneSubLayer .phone {
+    background: none;
+    border: medium none;
+    display: inline-block;
+    height: 29px;
+    margin: 13px 0 0 10px;
+    width: 315px;
+    font-size: 20px;
+}
+
+#phoneSubLayer #phoneSub {
+    border: none;
+    clear: both;
+    display: block;
+    height: 48px;
+    margin: 13px 0 0 10px;
+    width: 321px;
+    background: none;
+    cursor: pointer;
+
+}
+
+#tra-layer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 90;
+    opacity: .6;
+    filter: alpha(opacity:60);
+    _height: expression((this.parentElement.clientHeight)+'px');
+    background: #000;
+    display: none;
+}
+
+* html #tra-layer {
+    position: absolute;
+    left: expression(documentElement.scrollLeft+documentElement.clientWidth -this.offsetWidth);
+    top: expression(documentElement.scrollTop+documentElement.clientHeight -this.offsetHeight);
+}
+
+#topLayer {
+    width: 640px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#topLayer .txt {
+    width: 520px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: left;
+    color: #b17656;
+    font-size: 20px;
+    line-height: 30px;
+    height: 30px;
+    padding: 20px 0;
+}
+
+#topLayer .txt a {
+    color: #fff;
+}
+
+#topTable {
+    width: 520px;
+    display: block;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#topTable td {
+    height: 57px;
+    font-size: 26px;
+}
+
+#topTable .bg1 {
+    background: #2e2e2e;
+}
+
+.cols1 {
+    width: 180px;
+}
+
+.cols2 {
+    width: 340px;
+}
+
+.color1 {
+    color: #e70906;
+}
+
+.color2 {
+    color: #f65211;
+}
+
+.color3 {
+    color: #826142;
+}
+
+.ewm {
+    padding: 40px 0;
+}
+
+.ewm,
+.ewm ul {
+    width: 100%;
+}
+
+.ewm li {
+    width: 49%;
+    text-align: center;
+    display: inline-block;
+}
+
+.ewm li p {
+    line-height: 30px;
+    font-size: 20px;
+    color: #fff;
+}
+
+@media (max-width: 640px) {
+    .gameBody {
+        width: 100%;
+        margin: 0 auto;
+        background: #000;
+        /*border-radius: 10px;*/
+    }
+
+    .gameBody section {
+        width: 340px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 0;
+    }
+
+    .gameBody .but {
+        padding: 20px 0;
+    }
+
+    .timing {
+        padding: 0;
+    }
+
+    .lenove-pic {
+        width: 100%;
+        height: auto;
+    }
+
+    .gameBody .info {
+        clear: both;
+        padding: 0 0 20px;
+        margin: auto;
+        line-height: 24px;
+        text-align: left;
+        color: #fff;
+    }
+
+    #photo {
+        width: 340px;
+    }
+
+    #phoneSubLayer {
+        width: 100%;
+        height: 191px;
+        background: url(../fp_image/phoneSub-bg.png) no-repeat;
+        background-size: 340px auto;
+        text-align: left;
+        position: absolute;
+        top: 410px;
+        left: 50%;
+        z-index: 100;
+        margin-left: -170px;
+        display: none;
+    }
+
+    #topLayer {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    #topLayer .txt {
+        font-size: 14px;
+    }
+
+    #topTable {
+        width: 100%;
+    }
+}

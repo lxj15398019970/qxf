@@ -1,0 +1,60 @@
+/**
+ * 注册/绑定 公共css部分
+ */
+ 
+
+
+
+/** 注册表单 **/
+.register-form{
+	margin: 30px 0;
+
+}
+/** 表单标签间距 **/
+.register-form.form-horizontal .control-label{
+    width: 100%;
+    margin-left: 11px;
+    text-align: right;
+    color: #292929;
+    font-size: 14px;
+    font-weight: normal;
+}
+.register-form.form-horizontal .col-sm-6{
+    padding-left:10px ;
+    padding-right:10px ;
+}
+.register-form.form-horizontal .form-control{
+    border-radius:0;
+    height: 38px;
+}
+.register-form.form-horizontal #getCode{
+    background: #e0e6e7;
+    padding: 7px 10px;
+}
+.register-form.form-horizontal .help-block{
+    font-size: 12px;
+}
+/** ckbox 位置 **/
+.register-form .checkbox{ margin-left: 116px;}
+
+/* 注册按钮 */
+.register-btn{
+    background: #47a2ff;
+    float: left;
+    margin: 30px 0 30px 116px;
+    padding: 10px 40px;
+}
+
+.register-login{
+    text-align: center;
+    padding: 80px;
+    border-left: 1px solid #d9dadc;
+    min-height: 600px;
+    margin: 40px 0;
+    line-height: 400px;
+}
+
+.bread-crumbs{
+    background:url(../../../images/reg-title-bg.png) no-repeat;
+    height: 65px;
+}

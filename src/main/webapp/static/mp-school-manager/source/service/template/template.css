@@ -1,0 +1,490 @@
+/**
+ *
+ * 使用AO思想来去写
+ * sherlock
+ *
+ **/
+
+
+
+/**
+ * 公共顶部top部分
+ */
+
+input:-webkit-autofill {
+    background-color: #ffffff;
+    background-image: none;
+    color: #000;
+}
+
+header {
+   height: 60px;
+min-height: 60px;
+background-color: #213447;
+color: #fff;
+
+}
+
+/* logo部分 */
+header a.logo {
+    background-image: url("../../../images/login-logo.png");
+    display: block;
+    width: 170px;
+    height: 60px;
+
+
+}
+/* 注册/显示用户信息部分 */
+.right-base{
+    margin-top: 14px;
+}
+
+
+/** 提示信息颜色**/
+.alert-success {
+    background-color: #1ABC9C;
+    color: #ffffff;
+}
+
+.alert-success .close:hover, .close:focus {
+    color: #ffffff;
+}
+
+/**
+ * 底部信息
+ */
+
+footer {
+    /* 背景 ＋ 字体  */
+    background: #2d2d2d;
+    color: #ffffff;
+
+    padding: 30px 0;
+}
+
+footer address {
+    margin: 0;
+    padding: 0;
+    color: #ccc
+}
+
+footer .message{
+ clear: both;
+ height: 24px;
+
+}
+footer .message >li{
+    float: left;
+}
+footer .message > li>a{
+    color: #ffffff;
+    display: block;
+
+}
+footer .message > li>a:after,footer .message > li>span:after{
+    content: "|";
+    margin: 0 10px;
+}
+footer .message > li:last-child span:after{
+    content: "";
+}
+
+
+
+/** 点击 按钮 超链接不出现边框 **/
+a,input,button{ outline:none !important; }
+::-moz-focus-inner{border:0px;} 
+.btn:focus, .btn:active:focus, .btn.active:focus{
+	outline:none !important;
+}
+a:active,input:active,button:active{
+	outline:none !important;
+}
+
+
+
+/*  公共进度指示 */
+.setup02{
+    overflow: hidden;
+    clear: both;
+}
+.setup02 .sub{
+    display: block;
+    border: 1px solid #c6d0d9;
+}
+
+.setup02 .sub> .sub-left{
+    background: #c6d0d9;
+    padding: 20px;
+}
+
+/* 选中 */
+.setup02 .sub.active > .sub-left{
+    background: #689fd8;
+}
+.setup02 .sub.active{
+    border: 1px solid #689fd8;
+}
+
+
+.setup02 .sub> .sub-right{
+    position: relative;
+    top: -13px;
+    font-size: 18px;
+    margin: 8px;
+}
+
+.setup02-pd{
+    padding: 0 36px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+
+/** 步骤导航 **/
+.setup {
+    overflow: hidden;
+    border: 1px solid #d9dadc;
+}
+
+.setup-nav {
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    color: inherit;
+    background: white;
+}
+
+/* 当前步骤 */
+.setup-nav.active {
+    background: #2980d7;
+    color: white;
+}
+
+/** 步骤导航 **/
+
+/** 头部展示 **/
+.lock-nav-top {
+    /*border-bottom: 1px solid #d9dadc;*/
+    margin: 0;
+    padding: 24px 30px;
+    background: #f9f9f9;
+    color: #535353;
+
+}
+
+.lock-nav-top .lock-title {
+    font-size: 18px;
+}
+
+/** 头部展示 **/
+
+/*
+ *  公共配置
+ */
+
+body, html {
+    background: #f3f3f3;
+    font-family: "微软雅黑","Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "黑体", Arial, sans-serif;
+    color: #222;
+    /*color: #47578B;*/
+    font-size: 14px;
+
+}
+
+/** 禁用响应布局 **/
+.container {
+    width: 980px !important;
+}
+
+.main {
+    background: #ffffff;
+    margin-top: 30px;
+
+    /** 圆角效果 **/
+    border-radius: 5px;
+    margin-bottom: 35px;
+}
+
+/** 圆角部分 **/
+.bd-radius-4 {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/** 百分百布局 **/
+.w5 {
+    width: 50%;
+    float: left;
+}
+
+.w3{
+    width: 33.333%;
+    float: left;
+}
+.w8-z{
+    width: 80%;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+/** 登出按钮**/
+a.logoOut {
+    color: #fff;
+    cursor: pointer;
+    margin-left: 15px;
+    top: 2px;
+}
+
+a.logoOut:hover {
+    color: #2980d7;
+    text-decoration: none;
+}
+
+/** 按钮部分 **/
+
+.btn-size-normal {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/** 一组button **/
+.btn-lock-group {
+    text-align: center;
+    padding-right: 36px;
+    margin-top: 45px;
+}
+
+.btn-default{
+    background: #e7eaee;
+}
+.btn-primary{
+    width: auto;
+    padding: 8px 35px;
+ 	  background: #4299f1;
+    border: 1px solid #479ef7;  
+}
+
+.btn-primary.small{
+    padding: 6px 12px;
+}
+
+
+.btn-primary:hover, .btn-primary:focus{
+     background: #47a2ff;
+  	  border: 1px solid #479ef7;  
+}
+
+ .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary{
+    background: #4299f1;
+    border: 1px solid #479ef7; 
+ }
+
+
+
+
+.btn-lock-group button {
+    margin-right: 20px;
+}
+
+/** 顶部提示部分 **/
+.alert-lock {
+    margin-top: 20px;
+    margin-bottom: 0;
+    position: fixed;
+    top: 10%;
+    z-index: 2000;
+    left: 50%;
+    display: none;
+}
+
+/** form 上下间距**/
+.lock-form-content {
+    margin: 35px 0;
+    overflow: hidden;
+}
+
+.lock-form-content.form-horizontal .control-label {
+    width: 100%;
+    margin-left: 25px;
+    text-align: left;
+}
+
+/** 重要标志 **/
+.important {
+    display: inline-block;
+    vertical-align: middle;
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    top: 7px;
+    margin-left: -10px;
+}
+
+/* 提示文字 */
+.text-info{
+    color: #777777;
+    position: relative;
+    top: 9px;
+    margin-left: 14px;
+}
+/** form 组件可用状态 **/
+.disabledForm {
+    border: 0 none;
+    box-shadow: inset 0 0px 0px #ffffff;
+}
+
+.enabledForm {
+    display: none;
+}
+
+/** 编辑组件 **/
+.editor {
+    top: 6px;
+    cursor: pointer;
+    margin-left: -21px;
+}
+
+/** css动画 **/
+
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+    border:1px solid #e7edf4;
+}
+.table-bordered{
+    border:1px solid #e7edf4;
+}
+.setting-table thead tr {
+    background: none repeat scroll 0 0 #f2f7fc;
+}
+.lock-form-content.form-horizontal .control-label{
+    width: 100%;
+    margin-left: 11px;
+    text-align: right;
+    color: #292929;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0 0 0;
+    line-height: 33px;
+}
+#userInfo-form .up-user-btn{
+    padding: 0 0 0 59px;
+}
+#upassword-form.form-horizontal .form-control {
+    border-radius: 0;
+    height: 38px;
+}
+#upassword-form .btn-lock-group{
+    margin: 0;
+}
+.btn-lock-group .pwd-subbtn {
+    float: left;
+    margin:0 0 30px 144px;
+    padding: 10px 40px;
+}
+
+
+/** 外部图片 **/
+.mp-account-img{
+    background-image: url("../../../images/mp-account.png");
+    width: 47px;
+    height: 47px;
+}
+
+.mp-server-img{
+    background-image: url("../../../images/mp-server.png");
+    width: 47px;
+    height: 47px;
+}
+
+.mp-dev-img{
+    background-image: url("../../../images/mp-dev.png");
+    width: 47px;
+    height: 47px;
+}
+
+.mp-password-img{
+    background-image: url("../../../images/mp-password.png");
+    width: 47px;
+    height: 47px;
+}
+
+.mp-email-img{
+    background-image: url("../../../images/mp-email.png");
+    width: 47px;
+    height: 47px;
+}
+
+
+
+.ib{
+    display: inline-block;
+}
+.help-block.error{
+    color: red;
+}
+.ml15{
+    margin-left: 15px;
+}
+
+
+.block-01{
+	display:inline-block;position: relative;top: 6px;left: 14px;
+}
+/**
+ *
+ * 使用AO思想来去写
+ * sherlock
+ *
+ **/
+
+/** 自旋转动画 **/
+
+/* 快 */
+.spin.fast{
+    -webkit-animation:spin .6s infinite linear ;
+}
+/* 正常 */
+.spin.normal{
+    -webkit-animation:spin 1s infinite linear ;
+}
+/* 慢 */
+.spin.slow{
+    -webkit-animation:spin 2s infinite linear ;
+}
+
+@-webkit-keyframes spin {
+    0%{
+        -webkit-transform: rotate(0deg);
+    }
+    50%{
+        -webkit-transform: rotate(180deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/** 自旋转动画 **/

@@ -1,0 +1,383 @@
+/**
+ *
+ * 使用AO思想来去写
+ * sherlock
+ *
+ **/
+
+/**
+ * banner部分
+ */
+
+.banner-wrap {
+    height: 523px;
+    background: #000000 url("../../../images/login-bg.jpg");
+    background-size: cover;
+}
+
+.banner-inner {
+
+}
+
+header {
+    background: none;
+    border: none;
+}
+
+/**
+ * 登录部分
+ **/
+#btnLogin{
+    width: 185px;
+    height: 46px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-top: 21px;
+    font-size: 18px;
+}
+.form-login {
+    /** 设置登录基本宽度 **/
+    width: 400px;
+    background: #ffffff;
+    padding: 22px 40px;
+
+    /** 距离顶部30px **/
+    margin-top: 60px;
+    height: 285px;
+
+    color: #262d42;
+    margin-right: 22px;
+    border-radius: 10px;
+
+}
+.form-login h3{
+    color: #262d42;
+    margin-top: 0;
+    margin-bottom: 13px;
+}
+
+/** 文本框间隙 **/
+.form-login .form-control {
+    position: relative;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 14px;
+}
+
+
+.bd-radius-top{
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;;
+
+}
+
+.bd-radius-bottom{
+    border-bottom-left-radius: 5px !important;;
+    border-bottom-right-radius: 5px!important;;
+}
+
+/** 去掉表单圆角 **/
+.form-login input[type="text"],
+.form-login input[type="password"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #e0e7ee;
+    border-radius: 4px;
+    /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);*/
+
+    /** 获得焦点动画 **/
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+body {
+    background:#f8f8f8;
+
+}
+
+.login-txt,
+.reg-links {
+    font-size: 16px;
+}
+
+.login-txt {
+    color: #fff;
+}
+
+.reg-links {
+    color: #47a2ff;
+    text-decoration: underline;
+}
+
+.reg-links:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.login-txt-num {
+    padding: 120px 0 0;
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+    line-height: 80px;
+}
+
+.login-txt-num .num {
+    font-size: 50px;
+    padding: 0 10px;
+}
+
+#loginForm .fll {
+    float: left;
+    width: 270px;
+    padding: 0 0 0 38px;
+}
+
+#loginForm .control-label {
+    padding: 0;
+    text-align: center;
+    line-height: 50px;
+    color: #333;
+}
+
+#loginForm  .radio, .checkbox{
+    margin-top: 15px;
+}
+
+#loginForm .form-group {
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+#loginForm input.form-control {
+    padding: 12px 5px;
+    border-radius: 0;
+    border: 1px solid #e0e7ee;
+    background: none;
+    box-shadow: none;
+    padding-left: 54px;
+
+}
+
+#loginForm div.col-sm-10 {
+    padding: 0 4px;
+}
+
+.find-pwd {
+    float: right;
+}
+
+#submit-btn {
+    width: auto;
+    padding: 8px 35px;
+    background: #47a2ff;
+    border: 1px solid #4a8ed3;
+}
+
+.QR-code {
+    float: left;
+    width: 156px;
+    font-size: 14px;
+    color: #373737;
+    text-align: center;
+    margin-left: 23px;
+}
+
+.QR-code h5 {
+    width: 156px;
+    text-align: center;
+}
+
+.QR-code ul {
+    padding: 0;
+}
+
+.QR-code li {
+    list-style-type: none;
+}
+
+
+#feature{
+
+}
+.feature-title{
+    text-align: center;
+    font-size:26px;
+    margin: 60px 0 60px;
+
+}
+.feature-title span{
+    background: #47a2ff;
+    color: #fff;
+    padding: 8px 40px;
+    border-radius: 40px;
+}
+
+
+.feature-a,
+.feature-b{
+    padding: 2px 0 0;
+    background: url("../../../images/login-line.png") repeat-x center top;
+}
+.feature-a{
+
+}
+.feature-a dl{
+    padding: 44px 0 0;
+    overflow: hidden;
+    padding-left:45px;
+}
+.feature-a dt{
+    float: left;
+    width: 146px;
+    font-size: 20px;
+    color: #505050;
+    padding: 10px 0 0;
+    font-weight: normal;
+}
+.feature-a dd{
+    float: left;
+    width: 700px;
+    padding: 0 0 2px;
+    background: url("../../../images/login-line.png") repeat-x center bottom;
+}
+.feature-a dd span{
+    display: inline-block;
+    width: 76px;
+    height: 60px;
+    line-height: 65px;
+    text-align: center;
+    margin-right:74px;
+    padding: 78px 0 0;
+    color: #6b6b6b;
+    background: url("../../../images/icon-bg.png") no-repeat;
+}
+.feature-a dd span.icon01{
+    background-position: 0 0;
+}
+.feature-a dd span.icon02{
+    background-position: -76px 0;
+}
+.feature-a dd span.icon03{
+    background-position: -152px 0;
+}
+.feature-a dd span.icon04{
+    background-position: -227px 0;
+}
+.feature-a dd span.icon05{
+    background-position: -303px 0;
+}
+.feature-a dd span.icon06{
+    background-position: 0 -77px;
+}
+.feature-a dd span.icon07{
+    background-position: -76px -77px;
+}
+.feature-a dd span.icon08{
+    background-position: -152px -77px;
+}
+.feature-a dd span.icon09{
+    background-position: -227px -77px;
+}
+.feature-a dd span.icon10{
+    background-position: -304px -77px;
+}
+.feature-a dd span.icon11{
+    background-position: 0 -154px;
+}
+.feature-a dd span.icon12{
+    background-position: -76px -154px;
+}
+.feature-a dd span.icon13{
+    background-position: -152px -154px;
+}
+.feature-a dd span.icon14{
+    background-position: -227px -154px;
+}
+.feature-a dd span.icon15{
+    background-position: -304px -154px;
+}
+
+.feature-a dd .list{
+    width: 1000px;
+    padding: 0 0 40px;
+}
+#schoolTab{
+    text-align: center;
+    padding: 57px 0 0;
+}
+#schoolTab li{
+    width: 104px;
+    display: inline-block;
+    float: none;
+    margin: 0 40px;
+    padding-bottom: 40px;
+}
+#schoolTab li.active{
+    background: url("../../../images/arrows.png") no-repeat center bottom;
+}
+#schoolTab li > .oc-5{
+	 opacity: 0.5;
+}
+#schoolTab li.active > .oc-5{
+  opacity: 1;
+}
+
+#schoolTab li img{
+    width: 104px;
+    height: 104px;
+    overflow: hidden;
+}
+#schoolTab li a{
+    width: 104px;
+    height: 104px;
+    overflow: hidden;
+    padding: 0;
+    background: none;
+    border: none;
+}
+.feature-b .school-pics{
+    float: left;
+    width: 700px;
+}
+.feature-b .school-pics img{
+    float: left;
+    width: 265px;
+    height: 441px;
+    overflow: hidden;
+    margin:0 30px;
+}
+.feature-b .ewm{
+    float: left;
+    width: 170px;
+}
+.feature-b .tab-content{
+    padding: 40px 0;
+    overflow: hidden;
+    padding-bottom: 70px;
+    padding-top: 70px;
+}
+
+
+.login-div{
+  position: relative;
+    color: #262d42;
+}
+.login-div label{
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    z-index: 10;
+    font-weight: normal;
+}

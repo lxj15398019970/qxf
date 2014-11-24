@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <bean id="stat-filter" class="com.alibaba.druid.filter.stat.StatFilter">
+        <property name="slowSqlMillis" value="2000"/>
+        <property name="logSlowSql" value="true"/>
+        <property name="mergeSql" value="true"/>
+    </bean>
+    <bean name="mpDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="driverClassName" value="${DBDriverClass}" />
+        <property name="url" value="${MP_DBJdbcUrl}" />
+        <property name="username" value="${MP_DBUser}" />
+        <property name="password" value="${MP_DBPassword}" />
+         <property name="testOnBorrow" value="true" /> 
+         <property name="validationQuery" value="select 1" /> 
+        <property name="defaultAutoCommit" value="false" />
+        <property name="maxActive" value="20" />
+         <property name="minIdle" value="1" />
+           <property name="initialSize" value="1" />
+
+        <!-- 合并统计多个数据源 -->
+        <property name="useGloalDataSourceStat" value="true" />
+
+        <!-- 配置监控统计拦截的filters -->
+        <property name="filters" value="stat" />
+        <property name="proxyFilters">
+            <list>
+                <ref bean="stat-filter"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="mpTransactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="mpDataSource" />
+    </bean>
+
+    <bean id="mpTransactionTemplate"
+          class="org.springframework.transaction.support.TransactionTemplate">
+        <property name="transactionManager" ref="mpTransactionManager" />
+    </bean>
+
+    <bean id="mpSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="mpDataSource" />
+        <property name="mapperLocations" value="WEB-INF/sql/mp/*Dao.xml" />
+        <property name="typeAliasesPackage" value="cn.thinkjoy.mp.model,cn.thinkjoy.mp.sms.model,cn.thinkjoy.mp.pojo"/>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="mpSqlSessionFactory"/>
+        <property name="basePackage" value="cn.thinkjoy.mp.dao.mp" />
+    </bean>
+    
+</beans>

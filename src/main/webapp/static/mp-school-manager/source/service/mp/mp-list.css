@@ -1,0 +1,31 @@
+/**
+ *
+ * 使用AO思想来去写
+ * sherlock
+ *
+ **/
+
+
+/**
+ * 添加 易信 微信 按钮部分
+ */
+
+.mp-list{
+    padding: 35px;
+    min-height: 600px;
+}
+
+
+.bread-crumbs2{
+    background:url(../../../images/reg-title-bg.png) no-repeat left -65px;
+    height: 65px;
+}
+button.gz-addbtn{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 20px 33px;
+}
+
+.setting-table td{
+    vertical-align: middle !important;
+}

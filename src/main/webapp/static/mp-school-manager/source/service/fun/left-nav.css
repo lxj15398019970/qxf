@@ -1,0 +1,63 @@
+/** 左侧公共部分样式 **/
+.br-solid{
+    border-right: 1px solid #d9dadc;
+}
+.bb-solid{
+    border-bottom: 1px solid #d9dadc;
+}
+.sidebar h4{
+    padding:0 30%;
+    margin-left: -15px;
+    margin-bottom: 0;
+    height: 51px;
+    line-height: 51px;
+    background:url("../../../images/nav-sidebar-bg2.png") repeat-x ;
+    color: #fff;
+    text-align: center;
+}
+.nav-main{
+}
+.sidebar-base{
+    margin-top: -10px;
+}
+.nav-sidebar{
+    overflow: hidden;
+    margin-left: -15px;
+}
+/** 配置导航字体 **/
+.nav-sidebar > li > a{
+    color: #222;
+    margin:0;
+    display:block;
+    padding: 0;
+    height: 51px;
+    line-height: 51px;
+}
+.nav-sidebar > li > a:hover,
+.nav-sidebar > li > a:active,
+.nav-sidebar > li > a:visited,
+.nav-sidebar > li > a:focus{
+    background: none;
+}
+
+.nav-sidebar li{
+    height: 51px;
+    line-height: 51px;
+    background:url("../../../images/nav-sidebar-bg.png") repeat-x ;
+    text-align: center;
+}
+
+/* 选中样式 */
+.nav-sidebar > li.active{
+    background:url("../../../images/nav-sidebar-bg3.png") repeat-x ;
+}
+.nav-sidebar > li.active >a{
+    color: #222;
+}
+.nav-sidebar > li.active >a:hover{
+    background:none;
+}
+.nav-sidebar > li >a:hover{
+    background:none;
+}
+/** 左侧公共部分样式 **/
